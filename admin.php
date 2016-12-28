@@ -28,43 +28,55 @@
 
     $body = '<h2>Edit global preferences:</h2>
 <form id="preferences" action="savepref.php" method="post">
-<label for="DNS">DNS: </label><input type="text" id="DNS" name="DNS" value="' . $dns . '" />';
+<table>
+<tr><td><label for="DNS">DNS: </label></td><td><input type="text" id="DNS" name="DNS" value="' . $dns . '" /></td></tr>';
 
     if ($synclibrary == 'True') {
-        $body = $body . '<label for="synclibrary">Sync Library Enabled:</label><input type="checkbox" name="synclibrary" id="synclibrary" value="True" checked />';
+        $body = $body . '<tr><td><label for="synclibrary">Sync Library Enabled:</label></td>
+        <td><input type="checkbox" name="synclibrary" id="synclibrary" value="True" checked /></td></tr>';
     }else {
-        $body = $body . '<label for="synclibrary">Sync Library Enabled:</label><input type="checkbox" name="synclibrary" id="synclibrary" value="True" />';
+        $body = $body . '<tr><td><label for="synclibrary">Sync Library Enabled:</label></td>
+        <td><input type="checkbox" name="synclibrary" id="synclibrary" value="True" /></td></tr>';
     }
 
     if ($syncmedia == 'True') {
-        $body = $body . '<label for="syncmedia">Sync Media Enabled:</label><input type="checkbox" name="syncmedia" id="syncmedia" value="True" checked />';
+        $body = $body . '<tr><td><label for="syncmedia">Sync Media Enabled:</label></td>
+        <td><input type="checkbox" name="syncmedia" id="syncmedia" value="True" checked /></td></tr>';
     }else {
-        $body = $body . '<label for="syncmedia">Sync Media Enabled:</label><input type="checkbox" name="syncmedia" id="syncmedia" value="True" />';
+        $body = $body . '<tr><td><label for="syncmedia">Sync Media Enabled:</label></td>
+        <td><input type="checkbox" name="syncmedia" id="syncmedia" value="True" /></td></tr>';
     }
 
     if ($syncmedia == 'True') {
-        $body = $body . '<label for="syncpref">Sync Preferences/Playlists Enabled:</label><input type="checkbox" name="syncpref" id="syncpref" value="True" checked />';
+        $body = $body . '<tr><td><label for="syncpref">Sync Preferences/Playlists Enabled:</label></td>
+        <td><input type="checkbox" name="syncpref" id="syncpref" value="True" checked /></td></tr>';
     }else {
-        $body = $body . '<label for="syncpref">Sync Preferences/Playlists Enabled:</label><input type="checkbox" name="syncpref" id="syncpref" value="True" />';
+        $body = $body . '<tr><td><label for="syncpref">Sync Preferences/Playlists Enabled:</label></td>
+        <td><input type="checkbox" name="syncpref" id="syncpref" value="True" /></td></tr>';
     }
 
     if ($automode == 'True') {
-        $body = $body . '<label for="automode">Auto Mode Enabled:</label><input type="checkbox" name="automode" id="automode" value="True" checked />';
+        $body = $body . '<tr><td><label for="automode">Auto Mode Enabled:</label></td>
+        <td><input type="checkbox" name="automode" id="automode" value="True" checked /></td></tr>';
     }else {
-        $body = $body . '<label for="automode">Auto Mode Enabled:</label><input type="checkbox" name="automode" id="automode" value="True" />';
+        $body = $body . '<tr><td><label for="automode">Auto Mode Enabled:</label></td>
+        <td><input type="checkbox" name="automode" id="automode" value="True" /></td></tr>';
     }
 
-    $body = $body . '<input type="submit" id="submit" name="submit" value="Save settings">
+    $body = $body . '<td><td><input type="submit" id="submit" name="submit" value="Save settings" /></td><td></td></tr>
+    </table>
     </form>
     <h2>Add a new user:</h2>
     <form id="newuser" action="adduser.php" method="post">
-    <label for="username">Username (no spaces):</label>
-    <input type="text" id="username" name="username" />
-    <label for="password1">Password:</label>
-    <input type="password" id="password1" name="password1" />
-    <label for="password2">Confirm password:</label>
-    <input type="password" id="password2" name="password2" />
-    <input type="submit" name="submit" id="submit" value="Add User" />
+    <table>
+    <tr><td><label for="username">Username (no spaces):</label></td>
+    <td><input type="text" id="username" name="username" /></td></tr>
+    <tr><td><label for="password1">Password:</label></td>
+    <td><input type="password" id="password1" name="password1" /></td></tr>
+    <tr><td><label for="password2">Confirm password:</label></td>
+    <td><input type="password" id="password2" name="password2" /></td></tr>
+    <tr><td><input type="submit" name="submit" id="submit" value="Add User" /></td><td></td></tr>
+    </table>
     </form>';
 
 

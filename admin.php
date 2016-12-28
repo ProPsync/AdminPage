@@ -75,7 +75,7 @@
     <td><input type="password" id="password1" name="password1" /></td></tr>
     <tr><td><label for="password2">Confirm password:</label></td>
     <td><input type="password" id="password2" name="password2" /></td></tr>
-    <tr><td><input type="submit" name="submit" id="submit" value="Add User" /></td><td></td></tr>
+    <tr><td></td><td><input type="submit" name="submit" id="submit" value="Add User" /></td></tr>
     </table>
     </form>
     

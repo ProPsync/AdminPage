@@ -1,3 +1,10 @@
+<?php
+    $auth_value = $_COOKIE['ProPsAUTH'].trim();
+    if (file_exists('/var/www/auths/' . $auth_value)){
+        //Already Authorized
+        header('Location: admin.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en-US">
     <head>

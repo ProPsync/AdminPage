@@ -65,39 +65,6 @@
 
     $body = $body . '<td><td><input type="submit" id="submit" name="submit" value="Save settings" /></td><td></td></tr>
     </table>
-    </form>
-    <h2>Add a new user:</h2>
-    <form id="newuser" action="adduser.php" method="post">
-    <table>
-    <tr><td><label for="username">Username (no spaces):</label></td>
-    <td><input type="text" id="username" name="username" /></td></tr>
-    <tr><td><label for="password1">Password:</label></td>
-    <td><input type="password" id="password1" name="password1" /></td></tr>
-    <tr><td><label for="password2">Confirm password:</label></td>
-    <td><input type="password" id="password2" name="password2" /></td></tr>
-    <tr><td></td><td><input type="submit" name="submit" id="submit" value="Add User" /></td></tr>
-    </table>
-    </form>
-    
-    <h2>Edit user:</h2>
-    <p>(Enter passwords only if you want to reset the password for the user)</p>
-    <form id="edituser" action="edituser.php" method="post">
-    <table>
-    <tr>
-    <td><label for="un">Username:</label></td><td><input type="text" id="un" name="username" /></td>
-    </tr>
-    <tr>
-    <td><label for="pw1">Password</label></td><td><input type="password" id="pw1" name="password1" /></td>
-    </tr>
-    <tr>
-    <td><label for="pw2">Confirm password:</label></td><td><input type="password" id="pw2" name="password2" /></td>
-    </tr>
-    <tr>
-    <td><label for="account_enabled-yes">Account status:</label></td><td><input type="radio" id="account_enabled-yes" name="account_enabled" value="true" checked /> Enabled</td>
-    </tr>
-    <tr><td></td><td><input type="radio" id="account_enabled-no" name="account_enabled" value="false" /> Disabled</td></tr>
-    <tr><td></td><td><input type="submit" id="submit" name="submit" value="Save user" /></td></tr>
-    </table>
     </form>';
 
 

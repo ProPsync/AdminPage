@@ -25,7 +25,41 @@
     $automode = between($config, '<automode>', '</automode>');
 
 
-    $body = $_POST["automode"];
+    if ($_POST["synclibrary" == "True"]) {
+        $synclibrary = "True";
+    }else {
+        $synclibrary = "False";
+    }
+
+    if ($_POST["syncmedia" == "True"]) {
+        $syncmedia = "True";
+    }else {
+        $syncmedia = "False";
+    }
+
+    if ($_POST["syncpref" == "True"]) {
+        $syncpref = "True";
+    }else {
+        $syncpref = "False";
+    }
+
+    if ($_POST["automode" == "True"]) {
+        $automode = "True";
+    }else {
+        $automode = "False";
+    }
+
+    $dns = $_POST["DNS"];
+
+
+    shell_exec("echo '<dns>" . $dns . "</dns>'>/var/www/html/config.txt");
+    shell_exec("echo '<mediarepo>" . $mediarepo . "</mediarepo>'>>/var/www/html/config.txt");
+    shell_exec("echo '<libraryrepo>" . $libraryrepo . "</libraryrepo>'>>/var/www/html/config.txt");
+    shell_exec("echo '<prefrepo>" . $prefrepo . "</prefrepo>'>>/var/www/html/config.txt");
+    shell_exec("echo '<syncmedia>" . $syncmedia . "</syncmedia>'>>/var/www/html/config.txt");
+    shell_exec("echo '<synclibrary>" . $synclibrary . "</synclibrary>'>>/var/www/html/config.txt");
+    shell_exec("echo '<syncpref>" . $syncpref . "</syncpref>'>>/var/www/html/config.txt");
+    shell_exec("echo '<automode>" . $automode . "</automode>'>>/var/www/html/config.txt");
 
     function between($string, $start, $end){
         $string = ' ' . $string;

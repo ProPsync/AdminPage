@@ -42,6 +42,16 @@ input[type=checkbox] {
     border-radius: 50px;
 }
 
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+}
+
 
 
 #logo {

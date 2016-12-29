@@ -52,7 +52,7 @@
     $dns = $_POST["DNS"];
 
 
-    shell_exec("echo '<dns>" . $dns . "</dns>'>/var/www/html/config.txt");
+    passthru("echo '<dns>" . $dns . "</dns>'>/var/www/html/config.txt");
     shell_exec("echo '<mediarepo>" . $mediarepo . "</mediarepo>'>>/var/www/html/config.txt");
     shell_exec("echo '<libraryrepo>" . $libraryrepo . "</libraryrepo>'>>/var/www/html/config.txt");
     shell_exec("echo '<prefrepo>" . $prefrepo . "</prefrepo>'>>/var/www/html/config.txt");

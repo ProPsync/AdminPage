@@ -52,7 +52,7 @@
     $dns = $_POST["DNS"];
 
 
-    passthru("echo '<dns>" . $dns . "</dns>'>/var/www/html/config.txt");
+    shell_exec("echo '<dns>" . $dns . "</dns>'>/var/www/html/config.txt");
     shell_exec("echo '<mediarepo>" . $mediarepo . "</mediarepo>'>>/var/www/html/config.txt");
     shell_exec("echo '<libraryrepo>" . $libraryrepo . "</libraryrepo>'>>/var/www/html/config.txt");
     shell_exec("echo '<prefrepo>" . $prefrepo . "</prefrepo>'>>/var/www/html/config.txt");
@@ -60,6 +60,8 @@
     shell_exec("echo '<synclibrary>" . $synclibrary . "</synclibrary>'>>/var/www/html/config.txt");
     shell_exec("echo '<syncpref>" . $syncpref . "</syncpref>'>>/var/www/html/config.txt");
     shell_exec("echo '<automode>" . $automode . "</automode>'>>/var/www/html/config.txt");
+
+    $body = "Completed.";
 
     function between($string, $start, $end){
         $string = ' ' . $string;
@@ -80,5 +82,6 @@
 </head>
 <body>
 <?php echo $body ?>
+<p><a href="admin.php">Go Back</a></p>
 </body>
 </html>

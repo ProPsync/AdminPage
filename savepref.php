@@ -25,25 +25,32 @@
     $automode = between($config, '<automode>', '</automode>');
 
 
-    if ($_POST["synclibrary" == "True"]) {
+
+
+
+
+
+
+
+    if ($_POST["synclibrary"] == 'True') {
         $synclibrary = "True";
     }else {
         $synclibrary = "False";
     }
 
-    if ($_POST["syncmedia" == "True"]) {
+    if ($_POST["syncmedia"] == 'True') {
         $syncmedia = "True";
     }else {
         $syncmedia = "False";
     }
 
-    if ($_POST["syncpref" == "True"]) {
+    if ($_POST["syncpref"] == 'True') {
         $syncpref = "True";
     }else {
         $syncpref = "False";
     }
 
-    if ($_POST["automode" == "True"]) {
+    if ($_POST["automode"] == 'True') {
         $automode = "True";
     }else {
         $automode = "False";

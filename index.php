@@ -18,7 +18,7 @@
         <form id="login" action="login.php" method="post">
 
             <table id="logintab">
-                <img src="images/ppslogo.png" alt="" />
+                <img id="logo" src="images/ppslogo.png" alt="" />
                 <tr><td><label for="username">Username: </label></td>
                 <td><input type="text" id="username" name="username" /></td></tr>
 

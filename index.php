@@ -15,11 +15,18 @@
     </head>
     <body>
         <form id="login" action="login.php" method="post">
-            <label for="username">Username: </label>
-            <input type="text" id="username" name="username" />
-            <label for="pw">Password: </label>
-            <input type="password" id="pw" name="pw" />
-            <input type="submit" id="submit" name="submit" value="submit" />
+            <img src="images/ppslogo.png" alt="" />
+            <div id="loginun">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" />
+            </div>
+            <div id="loginpw">
+                <label for="pw">Password: </label>
+                <input type="password" id="pw" name="pw" />
+            </div>
+            <div id="loginsubmit">
+                <input type="submit" id="submit" name="submit" value="submit" />
+            </div>
         </form>
     </body>
 </html>

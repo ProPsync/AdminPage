@@ -68,7 +68,7 @@
     shell_exec("echo '<syncpref>" . $syncpref . "</syncpref>'>>/var/www/html/config.txt");
     shell_exec("echo '<automode>" . $automode . "</automode>'>>/var/www/html/config.txt");
 
-    $body = "Completed.";
+    $body = "Preferences saved.";
 
     function between($string, $start, $end){
         $string = ' ' . $string;

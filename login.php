@@ -19,7 +19,7 @@
 
         setcookie('ProPsAUTH', $auth_value, time() + 86400);
 
-        //header('Location: admin.php');
+        header('Location: admin.php');
     }catch (Exception $e) {
         $result = 'un-authenticated';
     }

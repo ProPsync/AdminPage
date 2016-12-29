@@ -25,7 +25,7 @@
                 <tr><td><label for="pw">Password: </label></td>
                 <td><input type="password" id="pw" name="pw" /></td></tr>
 
-                <tr<td></td><td><input type="submit" id="submit" name="submit" value="Login" /></td></tr>
+                <tr><td></td><td><input type="submit" id="submit" name="submit" value="Login" /></td></tr>
             </table>
         </form>
     </body>

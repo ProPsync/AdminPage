@@ -14,19 +14,19 @@
         <meta class="viewport" name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+
         <form id="login" action="login.php" method="post">
-            <img src="images/ppslogo.png" alt="" />
-            <div id="loginun">
-                <label for="username">Username: </label>
-                <input type="text" id="username" name="username" />
-            </div>
-            <div id="loginpw">
-                <label for="pw">Password: </label>
-                <input type="password" id="pw" name="pw" />
-            </div>
-            <div id="loginsubmit">
-                <input type="submit" id="submit" name="submit" value="submit" />
-            </div>
+
+            <table id="logintab">
+                <img src="images/ppslogo.png" alt="" />
+                <tr><td><label for="username">Username: </label></td>
+                <td><input type="text" id="username" name="username" /></td></tr>
+
+                <tr><td><label for="pw">Password: </label></td>
+                <td><input type="password" id="pw" name="pw" /></td></tr>
+
+                <tr<td></td><td><input type="submit" id="submit" name="submit" value="Login" /></td></tr>
+            </table>
         </form>
     </body>
 </html>

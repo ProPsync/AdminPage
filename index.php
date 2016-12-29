@@ -1,8 +1,8 @@
 <?php
     $auth_value = $_COOKIE['ProPsAUTH'].trim();
-    if (file_exists('/var/www/auths/' . $auth_value)){
-        //Already Authorized
-        header('Location: admin.php');
+    if ((file_exists('/var/www/auths/' . $auth_value)) && ($auth_value != "")){
+        //Unauthorized
+        header('Location: index.php');
     }
 ?>
 <!DOCTYPE html>

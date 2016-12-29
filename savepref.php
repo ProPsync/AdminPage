@@ -1,7 +1,7 @@
 <?php
     $body = '';
-    $auth_value = $_COOKIE['ProPsAUTH'].trim();
-    if (!(file_exists('/var/www/auths/' . $auth_value))){
+    $auth_value = $_COOKIE['ProPsAUTH'];
+    if ((!(file_exists('/var/www/auths/' . $auth_value))) || ($auth_value == "")){
         //Unauthorized
         header('Location: index.php');
     }

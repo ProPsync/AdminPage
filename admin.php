@@ -1,5 +1,6 @@
 <?php
-
+    error_reporting( E_ALL );
+    ini_set('display_errors', 'On');
     $body = '';
     $auth_value = $_COOKIE['ProPsAUTH'];
     if ((!(file_exists('/var/www/auths/' . $auth_value))) || ($auth_value == "")){
@@ -24,6 +25,20 @@
     $syncpref = between($config, '<syncpref>', '</syncpref>');
 
     $automode = between($config, '<automode>', '</automode>');
+
+    $df = disk_free_space("/");
+    $dfg = round(($df / 1073741824),2);
+
+    $ds = disk_total_space("/");
+    $dsg = round(($ds / 1073741824),2);
+
+
+    $du = ($ds - $df);
+    $dug = round(($du / 1073741824),2);
+
+
+    $dup = (($du / $ds) * 100);
+
 
 
     $body = '<h2>Edit global preferences:</h2>
@@ -66,6 +81,30 @@
     $body = $body . '<td><td><input type="submit" id="submit" name="submit" value="Save settings" /></td><td></td></tr>
     </table>
     </form>';
+
+    if ($dup < 75) {
+        $body = $body . '<h3>Disk space used:</h3>
+    <p>' . $dug . 'GB / ' . $dsg . 'GB (' . $dfg . 'GB free)</p>
+    <div class="meter">
+        <span style="width: ' . $dup . '%"></span>
+    </div>';
+    }else {
+        if ($dup < 90) {
+            $body = $body . '<h3>Disk space used:</h3>
+    <p>' . $dug . 'GB / ' . $dsg . 'GB (' . $dfg . 'GB free)</p>
+    <div class="meter orange">
+        <span style="width: ' . $dup . '%"></span>
+    </div>';
+        } else {
+
+                $body = $body . '<h3>Disk space used:</h3>
+    <p>' . $dug . 'GB / ' . $dsg . 'GB (' . $dfg . 'GB free)</p>
+    <div class="meter red">
+        <span style="width: ' . $dup . '%"></span>
+    </div>';
+        }
+    }
+
 
 
 
